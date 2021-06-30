@@ -15,12 +15,12 @@ import os
 '                  '
 ''''''''''''''''''''
 
-def csv_to_dataframe(url, page_name, key1, key2= None, key3= None):
+def json_to_dataframe(url, page_name, key1, key2= None, key3= None):
     ''' 
-    Takes in a csv and return that dataframe.
-    csv_to_dataframe(
-    url: csv url,
-    page_name: the page name to be added to url in for loop
+    Takes in a json api and returns json api as a dataframe.
+    json_to_dataframe(
+    url: base url,
+    page_name: the page name to be added to api url 
     key1: key from dataframe,
     key2= None,
     key3= None,
@@ -59,14 +59,14 @@ def csv_to_dataframe(url, page_name, key1, key2= None, key3= None):
 
 def get_data(csv, url, page_name, key1, key2= None, key3= None, cached=False):
     '''
-    This function reads in df using csv_to_dataframe function and writes data to
+    This function reads in df using json_to_dataframe function and writes data to
     a csv file if cached == False or if cached == True reads in df from csv file present
     and returns df.
     '''
     if cached == False or os.path.isfile(csv) == False:
         
         #Read fresh data from db into a DataFrame.
-        df= csv_to_dataframe(url, page_name, key1, key2, key3)
+        df= json_to_dataframe(url, page_name, key1, key2, key3)
         
         # Write DataFrame to a csv file.
         df.to_csv(csv)
