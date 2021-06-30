@@ -81,4 +81,53 @@ def get_data(csv, url, page_name, key1, key2= None, key3= None, cached=False):
 
 
 
+def combined_dataframes():
+    '''
+    This function reads in items, stores, and sales csv files, creates a them as 
+    dataframes using pandas. The dataframes are joined using merge function from pandas,
+    newly joined dataframes are returned as one dataframe.
+    '''
+    #Bring in items csv using pandas
+    items_df_csv = pd.read_csv("items_df.csv")
+    #Bring in store csv using pandas
+    stores_df_csv = pd.read_csv("stores_df.csv")
+    #Bring in sales csv using pandas
+    sales_df_csv = pd.read_csv("sales_df.csv")
+    #Merging sales df and store df using pandas
+    sales_and_stores_df= pd.merge(sales_df_csv, stores_df_csv, left_on='store', right_on='store_id', how='left')
+    #Merging sales_and_store_df with items_df using pandas
+    sales_stores_items_df= pd.merge(sales_and_stores_df, items_df_csv, left_on='store_id', right_on='store_id', how='left')
+    
+    return sales_stores_items_df
+
+
+
+
+
+def get_germany_data(url, cached=False):
+    '''
+    This function reads in url for germany data and writes data to
+    a csv file if cached == False or if cached == True reads in germany df from
+    a csv file, returns df.
+    '''
+    germany_df = pd.read_csv(url)
+    
+    if cached == False or os.path.isfile('germany_df.csv') == False:
+        
+        # Read fresh data from db into a DataFrame.
+        df = germany_df
+        
+        # Write DataFrame to a csv file.
+        df.to_csv('germany_df.csv')
+        
+    else:
+        
+        # If csv file exists or cached == True, read in data from csv.
+        df = pd.read_csv('germany_df.csv', index_col=0)
+        
+    return df
+
+
+
+
 
