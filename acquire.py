@@ -57,7 +57,7 @@ def csv_to_dataframe(url, page_name, key1, key2= None, key3= None):
 
 def get_data(csv, url, page_name, key1, key2= None, key3= None, cached=False):
     '''
-    This function reads in items df and writes data to
+    This function reads in df and writes data to
     a csv file if cached == False or if cached == True reads in sales df from
     a csv file, returns df.
     '''
