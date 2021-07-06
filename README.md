@@ -4,7 +4,7 @@ This a repositiory for Time Series exercises.
 
 ## Table of Contents
 * [Language](#language)
-* [Band Name Generator](#DataAcquisition)
+* [Data Acquisition](#DataAcquisition)
 * [Working with Time Series Data](#WorkingwithTimeSeriesData)
 * [Data Preparation](#DataPreparation)
 
