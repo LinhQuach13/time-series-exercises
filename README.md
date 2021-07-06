@@ -4,9 +4,9 @@ This a repositiory for Time Series exercises.
 
 ## Table of Contents
 * [Language](#language)
-* [Band Name Generator](#Data Acquisition)
-* [Working with Time Series Data](#Working with Time Series Data)
-* [Data Preparation](#Data Preparation)
+* [Band Name Generator](#DataAcquisition)
+* [Working with Time Series Data](#WorkingwithTimeSeriesData)
+* [Data Preparation](#DataPreparation)
 
 ## Language: 
 Python
