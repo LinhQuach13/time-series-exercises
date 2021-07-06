@@ -1,5 +1,5 @@
 ## Description: 
-This a repositiory for Time Series exercises.
+This is a repositiory for Time Series exercises.
 
 
 ## Table of Contents
