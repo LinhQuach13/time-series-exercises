@@ -25,4 +25,7 @@ Python
 ## Data Exploration:
 - [explore exercises](https://github.com/LinhQuach13/time-series-exercises/blob/master/explore.ipynb)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 131049f2e08c584a9ad67c9987e8b7c6d1c659da
