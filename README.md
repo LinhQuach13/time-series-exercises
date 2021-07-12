@@ -21,3 +21,7 @@ Python
 ## Data Preparation:
 - [prepare exercises](https://github.com/LinhQuach13/time-series-exercises/blob/master/prepare_exercises.ipynb)
 - Uses [prepare.py](https://github.com/LinhQuach13/time-series-exercises/blob/master/prepare.py)
+
+## Data Exploration:
+- [explore exercises](https://github.com/LinhQuach13/time-series-exercises/blob/master/explore.ipynb)
+
